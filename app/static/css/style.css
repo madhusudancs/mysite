@@ -1,0 +1,179 @@
+body {
+  background: none repeat scroll 0 0 white;
+  color: #222222;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.block-header {
+  padding-top: 20px;
+}
+
+.block-header .wrap {
+  border: 2px solid #DDDDDD;
+  border-radius: 20px 20px 20px 20px;
+  float: left;
+  padding: 20px;
+}
+
+.block-header .wrap .about {
+  color: #777777;
+  font-family: 'PT Sans Caption',sans-serif;
+  font-size: 16px;
+}
+
+.block-header .name {
+  color: #0073B2;
+  font-family: 'Bitter',sans-serif;
+  font-size: 45px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.block-header .tagline {
+  font-family: 'Bitter';
+  padding-bottom: 30px;
+  padding-left: 5px;
+}
+
+.block-header .social-icons {
+  font-size: 48px;
+}
+
+.block-header .social-icon {
+  float: left;
+  padding-right: 90px;
+  
+}
+
+.block-header .social-icon:hover {
+  color: #007D9A;
+  cursor: pointer;
+}
+
+.menu {
+  margin-top: 50px;
+}
+
+.menu .button {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-color: #222222;
+  border-radius: 30px 30px 30px 30px;
+  border-style: solid;
+  border-width: 5px;
+  display: inline-block;
+  float: left;
+  font-family: 'Bitter',sans-serif;
+  height: 30px;
+  padding: 25px 20px 10px;
+  text-align: center;
+  width: 100px;
+}
+
+.menu .button:hover {
+  background: none repeat scroll 0 0 #0088CC;
+  border-color: #0088CC;
+  color: #FFFFFF; !important
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu .button.first {
+  margin: 20px 240px 20px 0;
+}
+
+.menu .button.second {
+  margin: 20px 240px 20px 0;
+}
+
+.menu .button.third {
+  margin: 20px 0;
+}
+
+.content {
+  font-family: 'PT Sans',sans-serif;
+  margin-top: 50px;
+}
+
+.content .date {
+  padding: 0 20px 10px 2px;
+}
+
+.content .title {
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.content .tag {
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-style: solid;   
+  border-width: 1px;
+  float: left;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 0px 5px 0px 8px;
+}
+
+.content .tag:hover {
+  color: #0088CC;
+  border-color: #007D9A;
+  cursor: pointer;
+}
+
+.content .text {
+  clear: both;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+a {
+  color: #222222;
+}
+
+a:hover {
+  color: #0088CC;
+  text-decoration: none;
+}
+
+.footer .line {
+  border-top: 1px solid #EEEEEE;
+  bottom: 20px;
+  height: 10px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer .content {
+  background: none repeat scroll 0 0 #FFFFFF;
+  bottom: 0;
+  color: #666666;
+  font-size: 12px;
+  height: 25px;
+  left: 0;
+  padding-top: 5px;
+  position: fixed;
+  width: 100%;
+}
+
+.footer .content .left {
+  padding-left: 20px;
+  float: left;
+}
+
+.footer .content .right {
+  padding-right: 20px;
+  float: right;
+}
+

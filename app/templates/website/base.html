@@ -1,0 +1,95 @@
+{% comment %}
+Copyright 2012 Madhusudan C.S.
+
+This file home.html is part of my site madhusudancs.info.
+
+This program which runs madhusudancs.info is free software: you can
+redistribute it and/or modify it under the terms of the GNU General
+Public License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset=utf-8 />
+  <link href="http://fonts.googleapis.com/css?family=Bitter|PT+Sans+Caption" rel="stylesheet" type="text/css">
+  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+
+  <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon" />
+  <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+  <title>Madhusudan C.S.</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row block-header">
+      <div class="span12">
+        <div class="row">
+          <div class="span6">
+            <div class="wrap">
+              <div class="about">
+Geek; Programmer; Pythonista; FOSS enthusiast, evangelist and contributor; Melange developer; opinionated about programming languages; crazy about cars and air-planes; choosy in watching movies; loves Bangalore, San Francisco and Southern California; and most importantly <b>addicted to coffee!</b>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="name">Madhusudan C.S.</div>
+            <div class="tagline">
+              <span style="color:#FE4365;">map</span>
+              (thoughts) => words; &nbsp;
+              <span style="color:#FE4365;">reduce</span>
+              (words) =>
+              <span style="color:#7F0055;font-weight: bold;">this;</span>
+            </div>
+            <div class="social-icons">
+             <a href="https://github.com/madhusudancs"><i class="social-icon icon-github-sign"></i></a>
+             <a href="https://plus.google.com/113141282929084508748/posts"><i class="social-icon icon-google-plus-sign"></i></a>            
+             <a href="https://twitter.com/madhusudancs"><i class="social-icon icon-twitter-sign"></i></a>
+             <a href="http://www.facebook.com/madhusudan.cs"><i class="social-icon icon-facebook-sign"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row menu">
+      <div class="span12">
+        <a href="/files/madhusudancs.pdf"><div class="button first">C.V.</div></a>
+        {% comment %}
+        <div class="button second">C.V.</div>
+        <div class="button third">C.V.</div>
+        {% endcomment %}
+      </div>
+    </div>
+    <div class="content">
+      {% block content %}{% endblock content %}
+    </div>
+  </div>
+  <div class="footer">
+    <section class="line"><hr></section>
+    <section class="content">
+      <section class="left">
+        Thanks to <a href="http://krishnabharadwaj.info/">Krishna Bharadwaj</a> for the initial CSS. Design inspired by <a href="http://krishnabharadwaj.info/">krishnabharadwaj.info</a> and <a href="http://punchagan.muse-amuse.in/">punchagan.muse-amuse.in</a>
+      </section>
+      <section class="right">
+        &copy; Copyright 2012 Madhusudan C.S.
+      </section>
+    </section>
+  </div>
+<script>
+
+</script>
+</body>
+</html>

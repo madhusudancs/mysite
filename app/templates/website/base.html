@@ -23,7 +23,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset=utf-8 />
   <link href="http://fonts.googleapis.com/css?family=Bitter|PT+Sans+Caption" rel="stylesheet" type="text/css">
-  <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
   <script src="http://code.jquery.com/jquery.min.js"></script>
@@ -59,22 +59,19 @@ Geek; Programmer; Pythonista; FOSS enthusiast, evangelist and contributor; Melan
              <a href="https://plus.google.com/113141282929084508748/posts"><i class="social-icon icon-google-plus-sign"></i></a>            
              <a href="https://twitter.com/madhusudancs"><i class="social-icon icon-twitter-sign"></i></a>
              <a href="http://www.facebook.com/madhusudan.cs"><i class="social-icon icon-facebook-sign"></i></a>
+             <a href="http://www.facebook.com/madhusudan.cs"><i class="social-icon icon-file"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row menu">
-      <div class="span12">
-        <a href="/files/madhusudancs.pdf"><div class="button first">C.V.</div></a>
-        {% comment %}
-        <div class="button second">C.V.</div>
-        <div class="button third">C.V.</div>
-        {% endcomment %}
+
+    <div class="row">
+      <div class="span10">
+        <div class="content">
+          {% block content %}{% endblock content %}
+        </div>
       </div>
-    </div>
-    <div class="content">
-      {% block content %}{% endblock content %}
     </div>
   </div>
   <div class="footer">

@@ -26,4 +26,5 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True, auto_now_add=True)
     tags = fields.ListField()
+    links = fields.ListField()
 

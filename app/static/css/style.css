@@ -24,7 +24,7 @@ body {
 }
 
 .block-header .name {
-  color: #0073B2;
+  color: #0073B2 !important;
   font-family: 'Bitter',sans-serif;
   font-size: 45px;
   padding-bottom: 25px;
@@ -100,12 +100,14 @@ body {
 
 .content .date {
   padding: 0 20px 10px 2px;
+  color: #777777;
 }
 
 .content .title {
   font-size: 28px;
   font-weight: bold;
   padding-bottom: 20px;
+  line-height: 1.2;
 }
 
 .content .tag {
@@ -135,10 +137,24 @@ body {
   font-size: 18px;
   line-height: 1.2;
   text-align: justify;
+  padding-bottom: 20px;
+}
+
+.content .text p {
+  padding-bottom: 10px;
+}
+
+.content .prefooterspacing {
+  padding: 50px;
 }
 
 a {
   color: #222222;
+}
+
+p a {
+  color: #0088CC;
+  text-decoration: none;
 }
 
 a:hover {

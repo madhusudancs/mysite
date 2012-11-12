@@ -20,8 +20,9 @@ from django import shortcuts
 from website import models
 
 def home(request):
-    return shortcuts.render_to_response('website/home.html')
+    posts = models.Post.objects.order_by('-published_on').all()
+    return shortcuts.render_to_response('website/home.html', {'posts': posts})
 
 def post(request, url_name):
-    p = shortcuts.get_object_or_404(models.Post, pk=poll_id)
-    return shorcuts.render_to_response('website/post.html', {'post': p})
+    post = shortcuts.get_object_or_404(models.Post, url_name=url_name)
+    return shortcuts.render_to_response('website/post.html', {'post': post})

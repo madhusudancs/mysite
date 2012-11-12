@@ -19,6 +19,19 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 {% endcomment %}
 
+{% block script %}
+{{ block.super }}
+<script type="text/javascript">
+  var disqus_shortname = 'madhusudancsblog';
+
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{% endblock script %}
+
 {% block content %}
 <div class="date">{{ post.published_on }}</div>
 <div class="title">

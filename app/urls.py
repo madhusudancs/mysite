@@ -23,5 +23,5 @@ admin.autodiscover()
 urlpatterns = defaults.patterns('',
     defaults.url(r'^$', 'app.website.views.home', name='home'),
     defaults.url(r'^(?P<url_name>[\w-]*)$', 'app.website.views.post', name='post'),
-    defaults.url(r'^prerelease/admin/', defaults.include(admin.site.urls)),
+    defaults.url(r'^staging/admin/', defaults.include(admin.site.urls)),
 )

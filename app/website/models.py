@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+import datetime
+
 from django.db import models
 from djangotoolbox import fields
 
@@ -33,7 +35,15 @@ class Post(models.Model):
     text = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True, auto_now_add=True)
-    published_on = models.DateTimeField(auto_now=False, auto_now_add=False)
+    published_on = models.DateTimeField(auto_now=False, auto_now_add=False,
+                                        blank=True)
     tags = ListField()
     links = ListField()
+
+    # Code taken from Django docs.
+    def was_published_recently(self):
+        return self.published_on >= timezone.now() - datetime.timedelta(days=1)
+    was_published_recently.admin_order_field = '-published_on'
+    was_published_recently.boolean = True
+    was_published_recently.short_description = 'Published recently?'
 

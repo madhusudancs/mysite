@@ -20,9 +20,13 @@ from django import shortcuts
 from website import models
 
 def home(request):
-    posts = models.Post.objects.order_by('-published_on').all()
+    # Show only published posts in the reverse chronological order.
+    posts = models.Post.objects.filter(
+        published_on__isnull=False).order_by('-published_on').all()
     return shortcuts.render_to_response('website/home.html', {'posts': posts})
 
 def post(request, url_name):
-    post = shortcuts.get_object_or_404(models.Post, url_name=url_name)
+    # If the post does not exist or is not published, we should 404.
+    post = shortcuts.get_object_or_404(models.Post, url_name=url_name,
+                                       published_on__isnull=False)
     return shortcuts.render_to_response('website/post.html', {'post': post})

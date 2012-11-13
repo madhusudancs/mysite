@@ -15,8 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from app.website import models
+from website import models
 from django.contrib import admin
 
-admin.site.register(models.Post)
+class PostAdmin(admin.ModelAdmin):
+    fields = ('title',)
+
+admin.site.register(models.Post, PostAdmin)
 

@@ -18,6 +18,14 @@
 from django.db import models
 from djangotoolbox import fields
 
+from website import forms
+
+
+class ListField(fields.ListField):
+    def formfield(self, **kwargs):
+        return models.Field.formfield(self, forms.StringListField, **kwargs)
+
+
 class Post(models.Model):
     url_name = models.CharField(max_length=1024)
     title = models.CharField(max_length=1024)
@@ -26,6 +34,6 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True, auto_now_add=True)
     published_on = models.DateTimeField(auto_now=False, auto_now_add=False)
-    tags = fields.ListField()
-    links = fields.ListField()
+    tags = ListField()
+    links = ListField()
 

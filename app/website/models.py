@@ -37,8 +37,8 @@ class Post(models.Model):
     modified_on = models.DateTimeField(auto_now=True, auto_now_add=True)
     published_on = models.DateTimeField(auto_now=False, auto_now_add=False,
                                         blank=True)
-    tags = ListField()
-    links = ListField()
+    tags = ListField(blank=True)
+    links = ListField(blank=True)
 
     # Code taken from Django docs.
     def was_published_recently(self):

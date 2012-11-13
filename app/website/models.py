@@ -36,7 +36,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True, auto_now_add=True)
     published_on = models.DateTimeField(auto_now=False, auto_now_add=False,
-                                        blank=True)
+                                        blank=True, null=True)
     tags = ListField(blank=True)
     links = ListField(blank=True)
 

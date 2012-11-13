@@ -21,7 +21,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 {% block content %}
 {% for post in posts %}
-<div class="date">{{ post.published_on }}</div>
+{% if post.published_on %}
+  <div class="date">{{ post.published_on }}</div>
+{% else %}
+  <div class="date notpublished">Not published!</div>
+  <div class="date">Last modified: {{ post.modified_on }}</div>
+{% endif %}
 <div class="title">
   <a href="{% url post url_name=post.url_name %}">{{ post.title|safe }}</a>
 </div>

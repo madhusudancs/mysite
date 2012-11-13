@@ -15,18 +15,33 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+import itertools
 from django import shortcuts
 
 from website import models
 
+
 def home(request):
-    # Show only published posts in the reverse chronological order.
-    posts = models.Post.objects.filter(
-        published_on__isnull=False).order_by('-published_on').all()
+    if request.user.is_staff:
+        unpub_posts = models.Post.objects.filter(
+            published_on__isnull=True).order_by('-modified_on').all()
+        pub_posts = models.Post.objects.filter(
+            published_on__isnull=False).order_by('-published_on').all()
+        posts = list(itertools.chain(unpub_posts, pub_posts))
+    else:
+        # Show only published posts in the reverse chronological order.
+        posts = models.Post.objects.filter(
+            published_on__isnull=False).order_by('-published_on').all()
+
     return shortcuts.render_to_response('website/home.html', {'posts': posts})
 
+
 def post(request, url_name):
-    # If the post does not exist or is not published, we should 404.
-    post = shortcuts.get_object_or_404(models.Post, url_name=url_name,
-                                       published_on__isnull=False)
+    if request.user.is_staff:
+        post = shortcuts.get_object_or_404(models.Post, url_name=url_name)
+    else:
+        # If the post does not exist or is not published, we should 404.
+        post = shortcuts.get_object_or_404(models.Post, url_name=url_name,
+                                           published_on__isnull=False)
+
     return shortcuts.render_to_response('website/post.html', {'post': post})

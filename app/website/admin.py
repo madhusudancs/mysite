@@ -18,8 +18,11 @@
 from website import models
 from django.contrib import admin
 
+
 class PostAdmin(admin.ModelAdmin):
-    fields = ('title',)
+    list_display = ['title', 'tags', 'published_on', 'url_name', 'modified_on', 'created_on']
+    list_filter = ['published_on']
+    ordering = ['-published_on']
 
 admin.site.register(models.Post, PostAdmin)
 

@@ -177,24 +177,16 @@ a:hover {
   text-decoration: none;
 }
 
-.footer .line {
-  border-top: 1px solid #EEEEEE;
-  bottom: 20px;
-  height: 10px;
-  left: 0;
-  position: fixed;
-  width: 100%;
-}
-
 .footer .content {
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
   background: none repeat scroll 0 0 #FFFFFF;
   bottom: 0;
   color: #666666;
   font-size: 12px;
-  height: 25px;
+  height: 20px;
   left: 0;
-  padding-top: 5px;
-  position: fixed;
+  padding-top: 10px;
   width: 100%;
 }
 

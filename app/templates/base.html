@@ -26,6 +26,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   {% block stylesheet %}
   <link href="http://fonts.googleapis.com/css?family=Bitter|PT+Sans+Caption" rel="stylesheet" type="text/css">
   <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/static/css/prettify.css" rel="stylesheet" type="text/css" />
   <link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon" />
   <link href="/static/css/style.css" rel="stylesheet" type="text/css">
@@ -34,11 +35,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
   {% block script %}
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="/static/js/prettify.min.js"></script>
   {% endblock script%}
 
   <title>Madhusudan C.S.</title>
 </head>
-<body>
+<body onload="prettyPrint()" bgcolor="white">
   <div class="container">
     <div class="row block-header">
       <div class="span12">

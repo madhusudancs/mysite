@@ -172,6 +172,11 @@ a {
   margin: 0 0 10px 2px;
 }
 
+.content .references a {
+  color: #0088CC;
+  text-decoration: none;
+}
+
 p a {
   color: #0088CC;
   text-decoration: none;

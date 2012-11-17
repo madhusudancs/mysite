@@ -29,6 +29,15 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
+
+  $(document).ready(function() {
+    $("a.fn").click(function() {
+      var target = $(this).attr('href');
+      $(document.body).animate({
+        'scrollTop':   $(target).offset().top
+      }, 2000);
+    });
+  });
 </script>
 {% endblock script %}
 

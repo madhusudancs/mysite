@@ -169,6 +169,7 @@ a {
 
 .content .references {
   list-style: none;
+  margin: 0 0 10px 2px;
 }
 
 p a {

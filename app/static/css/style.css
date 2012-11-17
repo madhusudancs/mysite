@@ -172,6 +172,14 @@ a {
   margin: 0 0 10px 2px;
 }
 
+.content .references .number {
+  float: left;
+}
+
+.content .references .item {
+  padding-left: 45px;
+}
+
 .content .references a {
   color: #0088CC;
   text-decoration: none;

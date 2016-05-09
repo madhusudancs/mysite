@@ -1,4 +1,5 @@
 import pickle
+import sys
 
 from datetime import datetime
 from time import mktime
@@ -8,7 +9,7 @@ from website import models
 for p in models.Post.objects.all():
     p.delete()
 
-data = pickle.load(open('/media/professional/blogdata/myoldblog.txt', 'r'))
+data = pickle.load(open(sys.argv[1], 'r'))
 entries = data['entries']
 
 for e in entries:

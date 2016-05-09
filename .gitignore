@@ -1,4 +1,7 @@
 settings.py
 *~
 *.pyc
+django.wsgi
 
+app/backup
+app/files
